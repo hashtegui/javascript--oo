@@ -3,15 +3,13 @@ import { Cliente } from "./Cliente.js";
 export class ContaCorrente {
     agencia;
     static numeroDeContas = 0;
-
-    _cliente;
-    _saldo = 0;
     //#saldo;
 
     constructor(cliente, agencia) {
         this._cliente = cliente;
-        this.agencia = agencia
-        ContaCorrente.numeroDeContas+=1;
+        this.agencia = agencia;
+        this._saldo = 0;
+        ContaCorrente.numeroDeContas += 1;
     }
 
     set cliente(novovalor) {
