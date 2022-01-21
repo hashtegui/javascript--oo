@@ -3,6 +3,7 @@ class Cliente {
     cpf;
     agencia;
     saldo;
+    rg;
 
 }
 
@@ -13,6 +14,7 @@ cliente1.nome = "Ricardo";
 cliente1.cpf = 11122233309;
 cliente1.agencia = 1001;
 cliente1.saldo = 0;
+cliente1.rg = 123456;
 
 
 cliente2.nome = "Alice";
