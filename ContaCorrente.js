@@ -1,5 +1,4 @@
-
-class ContaCorrente {
+export class ContaCorrente {
     agencia;
     _saldo = 0;
     //#saldo;
