@@ -1,14 +1,31 @@
-export class Conta{
+export class Conta {
     constructor(saldoInicial, cliente, agencia) {
         this._saldo = saldoInicial;
         this._cliente = cliente;
         this._agencia = agencia;
     }
 
+    set cliente(novovalor) {
+        if (novovalor instanceof Cliente) {
+            this._cliente = novovalor;
+        }
+    }
+
+    get cliente() {
+        return this._cliente;
+    }
+
+    get saldo() {
+        return this._saldo;
+    }
+
     sacar(valor) {
-        if (this._saldo >= valor) {
-            this._saldo -= valor;
-            return valor;
+        let taxa = 1;
+        const valorSacado = taxa * valor;
+        
+        if (this._saldo >= valorSacado) {
+            this._saldo -= valorSacado;
+            return valorSacado;
         }
     }
 
