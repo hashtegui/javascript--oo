@@ -11,7 +11,7 @@ export class ContaCorrente extends Conta {
     teste() {
         console.log("Teste na classe conta corrente");
     }
-
+    //sobrescrevendo o comportamento de sacar
     sacar(valor) {
         let taxa = 1.1;
         return this._sacar(valor, taxa);
