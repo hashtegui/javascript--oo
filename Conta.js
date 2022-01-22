@@ -24,10 +24,9 @@ export class Conta {
     get saldo() {
         return this._saldo;
     }
-
+    // método abstrato
     sacar(valor) {
-        let taxa = 1;
-        return this._sacar(valor, taxa);
+        throw new Error("Método sacar é abstrato e não foi sobrescrito");
     }
 
     _sacar(valor, taxa) {
